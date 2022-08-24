@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Saludo from './components/Saludo';
 
 function App() {
   const mensaje = 'Bienvenido a mi App'
@@ -13,6 +14,7 @@ function App() {
     <h1>Hola Mundo!!</h1>
     <h3>Ya estoy aquí de nuevo</h3>
     <h2 style={ estilos }>{ mensaje }</h2>
+    <Saludo name='Juan' lastname='Pérez'/>
   </div>
   );
 }
