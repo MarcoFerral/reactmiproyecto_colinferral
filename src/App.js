@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const mensaje = 'Bienvenido a mi App'
+
+
   return (
-  <>
+  <div className= 'container'>
     <h1>Hola Mundo!!</h1>
     <h3>Ya estoy aquí de nuevo</h3>
-    <li>Usar la metodología de React</li>
-    <li>Aprender algo nuevo</li>
-    </>
+    <h2 style={ {backgroundColor:'#888'} }>{ mensaje }</h2>
+  </div>
   );
 }
 
