@@ -7,7 +7,7 @@ const Saludo = ( {name, lastname, fn, children} ) => {
 
   return (
     <>
-    <h1>¡Saludos a: {name} {lastname}!</h1> 
+    <h1 className=" font-mono text-3xl font-bold underline m-6">¡Saludos a: {name} {lastname}!</h1> 
     {children}
     </>
   )
