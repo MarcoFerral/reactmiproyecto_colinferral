@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.greeting {
+    background-color: #red;
+}

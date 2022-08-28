@@ -3,6 +3,7 @@ import './App.css';
 import NavBar2 from './components/NavBar2';
 import Bienvenida from './components/Bienvenida';
 import Login from './Login';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <NavBar2/>
     <Bienvenida/>
     <Login/>
+    <ItemListContainer greeting='ARCADIA SPOT... el encuentro de los mejores gamers del planeta'/>
   </div>
   );
 }
