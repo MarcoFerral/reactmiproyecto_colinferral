@@ -1,6 +1,6 @@
 const Bienvenida = () => {
   return (
-    <div className="hero min-h-screen bg-base-200 mx-10 my-15" >
+    <div className="hero min-h-screen bg-base-200 mx-10 my-15 container" >
     <div className="hero-content text-center" >
       <div className="max-w-md">
         <h1 className="text-6xl font-bold">¡¡¡Bienvenido!!!</h1>
