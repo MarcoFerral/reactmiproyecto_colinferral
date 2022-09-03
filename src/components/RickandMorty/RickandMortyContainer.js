@@ -19,7 +19,7 @@ const RickandMortyContainer = () => {
     return (
     <>
         <div>Rick and Morty</div>
-        <RickandMortyCardList chars={chars}/>
+        <RickandMortyCardList chars={chars} />
     </>
   )
 }
