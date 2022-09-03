@@ -7,6 +7,33 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [counter, setCounter] = useState(0)
+  const [products, setProducts] = useState([])
+  
+  useEffect( () => {
+    console.log('promesa en mounting');
+    
+    //estructura de un Promise//
+    const getProducts = new Promise( (resolve, reject) => {
+      const rand = Math.random()
+      console.log(rand);
+      
+      if ( rand >0.5 ){
+        resolve( ['mouse', 'teclado', 'cpu'] )
+      } else {
+        reject( 'promesa rechazada')
+      }
+    })
+
+
+    getProducts
+    .then (data => {
+      console.log(data); 
+      setProducts( data )
+    })
+    .catch ( err => { console.log(err); })
+    .finally( () => {console.log('finally siempre sucede'); })
+
+  }, [])
   
   useEffect( () => {
     console.log('efecto al montaje');
@@ -34,6 +61,7 @@ function App() {
       <strong>Contador: {counter}</strong>
     </div>
     <button onClick={handleClick} className='btn my-5'>Click</button>
+    {products.map( p => <li>{p}</li> )}
     <Bienvenida/>
     <Login/>
     <ItemListContainer greeting='ARCADIA SPOT... el encuentro de los mejores gamers del planeta'/>
