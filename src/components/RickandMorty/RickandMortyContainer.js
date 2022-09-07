@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import NavBar2 from "../NavBar2"
 import RickandMortyCardList from "./RickandMortyCardList"
 
 const RickandMortyContainer = () => {
@@ -17,8 +18,10 @@ const RickandMortyContainer = () => {
     
     
     return (
+      
     <>
-        <div>Rick and Morty</div>
+    
+        <h1>Rick and Morty API</h1>
         <RickandMortyCardList chars={chars} />
     </>
   )

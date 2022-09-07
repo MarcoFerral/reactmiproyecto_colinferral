@@ -55,12 +55,12 @@ function App() {
   console.log('hubo render');
 
   return (
-  <div className= 'container'>
+  <div classNameName= 'container'>
     <NavBar2/>
-    <div className='my-5'>
+    <div classNameName='my-5'>
       <strong>Contador: {counter}</strong>
     </div>
-    <button onClick={handleClick} className='btn my-5'>Click</button>
+    <button onClick={handleClick} classNameName='btn my-5'>Click</button>
     {products.map( p => <li>{p}</li> )}
     <Bienvenida/>
     <Login/>
