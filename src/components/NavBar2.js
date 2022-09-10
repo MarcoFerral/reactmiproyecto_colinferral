@@ -1,9 +1,14 @@
+import { Link, NavLink } from "react-router-dom"
+
 const NavBar2 = () => {
   return (
     <div classNameName="navbar bg-base-100">
   <div classNameName="flex-1">
-    <a classNameName="btn btn-ghost normal-case text-3xl">ARCADIA SPOT</a>
-  </div>
+    <NavLink classNameName="btn btn-ghost normal-case text-xl" to={'/'}>Home</NavLink>
+    <NavLink classNameName="btn btn-ghost normal-case text-xl" to={'/swapi'}>Starwars API</NavLink>
+    <NavLink classNameName="btn btn-ghost normal-case text-xl" to={'/ram'}>Rick and Morty</NavLink>
+{/*     <a classNameName="btn btn-ghost normal-case text-3xl">ARCADIA SPOT</a>
+ */}  </div>
   <div classNameName="flex-none">
     <div classNameName="dropdown dropdown-end">
       <label tabIndex="0" classNameName="btn btn-ghost btn-circle">

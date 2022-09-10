@@ -6,17 +6,23 @@ import RMortyApp from './RMortyApp';
 import App from './App';
 import SwapiContainer from './components/swapi/SwapiContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NavBar2 from './components/NavBar2';
+import Footer from './components/Footer';
+import RickandMortyDetail from './components/RickandMorty/RickandMortyDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //<React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App/>}/>
-        <Route path='/swapi' element={<SwapiContainer/>}/>
-        <Route path='/' element={<RMortyApp/>}/>
-      </Routes>
-    </BrowserRouter>
+  <BrowserRouter>
+    <NavBar2/>
+    <Routes>
+      <Route path='/' element={<App/>}/>
+      <Route path='/swapi' element={<SwapiContainer/>}/>
+      <Route path='/ram' element={<RMortyApp/>}/>
+      <Route path='/ram/:id' element={<RickandMortyDetail/>}/>
+    </Routes>
+    <Footer/>
+  </BrowserRouter>
   //</React.StrictMode>
 );
 

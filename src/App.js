@@ -55,6 +55,7 @@ function App() {
   console.log('hubo render');
 
   return (
+    
   <div classNameName= 'container'>
     <NavBar2/>
     <div classNameName='my-5'>
