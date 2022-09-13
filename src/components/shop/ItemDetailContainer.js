@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import products from "./productsData"
 
@@ -14,10 +15,13 @@ const product = {
 const ItemDetailContainer = () => {
 
 const [item, setItem] = useState({})
+const { slug } = useParams ()
 
     useEffect(() => {
       getItem().then( data => {
+        if (data){
         setItem(data)
+      }
 
       })
     }, [])
@@ -26,7 +30,7 @@ const [item, setItem] = useState({})
     const getItem = () => { 
        return new Promise((resolve => {
           setTimeout(() => {
-            resolve( product )
+            resolve( products.find( p => p.slug == slug) )
           }, 2000);  
         })
     }

@@ -9,6 +9,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar2 from './components/NavBar2';
 import Footer from './components/Footer';
 import RickandMortyDetail from './components/RickandMorty/RickandMortyDetail';
+import ItemDetailContainer from './components/shop/ItemDetailContainer';
+import ItemListContainer from './components/ItemListContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +22,8 @@ root.render(
       <Route path='/swapi' element={<SwapiContainer/>}/>
       <Route path='/ram' element={<RMortyApp/>}/>
       <Route path='/ram/:id' element={<RickandMortyDetail/>}/>
+      <Route path='/shop' element={<ItemListContainer/>}/>
+      <Route path='/shop/item/:slug' element={<ItemDetailContainer/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>
