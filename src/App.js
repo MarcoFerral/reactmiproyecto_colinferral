@@ -4,6 +4,7 @@ import Bienvenida from './components/Bienvenida';
 import Login from './Login';
 import ItemListContainer from './components/ItemListContainer';
 import { useEffect, useState } from 'react';
+import InputNoVowels from './components/InputNoVowels';
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -58,6 +59,7 @@ function App() {
     
   <div classNameName= 'container'>
     <NavBar2/>
+    <InputNoVowels/>
     <div classNameName='my-5'>
       <strong>Contador: {counter}</strong>
     </div>

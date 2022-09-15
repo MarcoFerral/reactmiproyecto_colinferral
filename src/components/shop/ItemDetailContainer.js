@@ -3,6 +3,34 @@ import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import products from "./productsData"
 
+export const ButtonCount = ({total, setTotal}) => {
+
+  const add = () => {
+    setTotal(total + 1 )
+  }
+
+  return (
+    <button onClick={} className="btn">{total}</button>
+  )
+}
+
+export const InputCount = ( {total, setTotal} ) => {
+  const onChangeHandler = (event) => {
+    const newTotal = parseInt(event.target.value)
+    
+    if (newTotal > 5) {
+      setTotal( newTotal )
+    }
+
+  }
+  return (
+    <>
+      <div>{total}</div>
+      <input onChange={onChangeHandler} type='text'/>
+    </>
+  )
+}
+
 
 const product = {
     name: 'Samsung Galaxy S20',
@@ -15,6 +43,7 @@ const product = {
 const ItemDetailContainer = () => {
 
 const [item, setItem] = useState({})
+const [total, setTotal] = useState(1)
 const { slug } = useParams ()
 
     useEffect(() => {
@@ -34,9 +63,16 @@ const { slug } = useParams ()
           }, 2000);  
         })
     }
-  
+    
+    const Count = total < 5 ? ButtonCount : InputCount
+
     return (
-    <ItemDetail item={item}/>
+      <>
+        <ItemDetail item={item}/>
+        <div className="m-5">
+          Total: <Count total={total} setTotal={setTotal}/>
+        </div>
+      </>
     
     
   )
