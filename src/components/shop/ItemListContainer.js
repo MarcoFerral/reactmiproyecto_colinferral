@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import CartContext from "../Context/CartContext"
 import products from "./productsData"
 
 const ItemListContainer = () => {
@@ -12,6 +13,7 @@ const ItemListContainer = () => {
     
 
   return (
+    <CartContext.Provider value={[]}>
     <div>
         { items.map( i => 
             <Link to={`/shop/item/${i.slug}`} key={i.id}>
@@ -19,6 +21,7 @@ const ItemListContainer = () => {
             </Link>
         )}
     </div>
+    </CartContext.Provider>
   )
 }
 export default ItemListContainer

@@ -5,6 +5,8 @@ import Login from './Login';
 import ItemListContainer from './components/ItemListContainer';
 import { useEffect, useState } from 'react';
 import InputNoVowels from './components/InputNoVowels';
+import DarkmodeContext from './components/Context/DarkMode';
+
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -59,6 +61,7 @@ function App() {
     
   <div classNameName= 'container'>
     <NavBar2/>
+    <DarkmodeContext.Provider value={true}/>
     <InputNoVowels/>
     <div classNameName='my-5'>
       <strong>Contador: {counter}</strong>
