@@ -1,9 +1,12 @@
+import { FavsProvider } from "./components/Context/FavsContext"
 import RickandMortyContainer from "./components/RickandMorty/RickandMortyContainer"
 
 const RMortyApp = () => {
   return (
     <div>
-        <RickandMortyContainer/>
+        <FavsProvider>
+          <RickandMortyContainer/>
+        </FavsProvider>
     </div>
   )
 }

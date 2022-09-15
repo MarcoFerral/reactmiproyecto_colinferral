@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
+import { useFavs } from "../Context/FavsContext"
 import NavBar2 from "../NavBar2"
 import RickandMortyCardList from "./RickandMortyCardList"
 
 const RickandMortyContainer = () => {
 
     const [chars, setChars] = useState([])
+    const {favs}= useFavs()
     
     useEffect(() => {
         const URL = 'https://rickandmortyapi.com/api/character'
@@ -22,6 +24,7 @@ const RickandMortyContainer = () => {
     <>
     
         <h1>Rick and Morty API</h1>
+        <strong>Lista de Favoritos</strong>{favs}
         <RickandMortyCardList chars={chars} />
     </>
   )
