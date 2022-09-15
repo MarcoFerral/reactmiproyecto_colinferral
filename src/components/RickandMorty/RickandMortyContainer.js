@@ -6,7 +6,7 @@ import RickandMortyCardList from "./RickandMortyCardList"
 const RickandMortyContainer = () => {
 
     const [chars, setChars] = useState([])
-    const {favs}= useFavs()
+    const {favs, clearFavs}= useFavs()
     
     useEffect(() => {
         const URL = 'https://rickandmortyapi.com/api/character'
@@ -20,13 +20,15 @@ const RickandMortyContainer = () => {
     
     
     return (
+      <>
       
-    <>
-    
-        <h1>Rick and Morty API</h1>
-        <strong>Lista de Favoritos</strong>{favs}
-        <RickandMortyCardList chars={chars} />
-    </>
-  )
-}
-export default RickandMortyContainer
+          <h1>Rick and Morty API</h1>
+          <strong>Lista de Favoritos</strong>
+          {favs.map( (f,i) => <li key={i}>{f}</li>)}
+          <button className="btn" onClick={clearFavs}>Borrar Lista</button>
+          <RickandMortyCardList chars={chars} />
+      </>
+    )
+  }
+  export default RickandMortyContainer
+      
