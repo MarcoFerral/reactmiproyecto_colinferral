@@ -1,14 +1,14 @@
 const RickandMortyCard = ( {id, name, species, image} ) => {
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-  <figure className="px-10 pt-10">
-    <img src={image} alt="Shoes" className="rounded-xl" />
+      <div classNameNameName="card w-96 bg-base-100 shadow-xl">
+  <figure classNameNameName="px-10 pt-10">
+    <img src={image} alt="Shoes" classNameNameName="rounded-xl" />
   </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">{name}</h2>
+  <div classNameNameName="card-body items-center text-center">
+    <h2 classNameNameName="card-title">{name}</h2>
     <p>{species}</p>
-    <div className="card-actions">
+    <div classNameNameName="card-actions">
     </div>
   </div>
 </div>

@@ -59,14 +59,14 @@ function App() {
 
   return (
     
-  <div classNameName= 'container'>
+  <div classNameNameNameName= 'container'>
     <NavBar2/>
     <DarkmodeContext.Provider value={true}/>
     <InputNoVowels/>
-    <div classNameName='my-5'>
+    <div classNameNameNameName='my-5'>
       <strong>Contador: {counter}</strong>
     </div>
-    <button onClick={handleClick} classNameName='btn my-5'>Click</button>
+    <button onClick={handleClick} classNameNameNameName='btn my-5'>Click</button>
     {products.map( p => <li>{p}</li> )}
     <Bienvenida/>
     <Login/>

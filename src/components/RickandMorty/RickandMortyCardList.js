@@ -18,7 +18,7 @@ const RickandMortyCardList = ({chars}) => {
         <Link to={'/ram/' + c.id}>
           <RickandMortyCard key={c.id} id={c.id}name={c.name} species={c.species} image={c.image}/>
         </Link>
-        <button onClick={(event) => {addHandler(event, c.name)}} className="btn">Agregar a Favoritos</button> 
+        <button onClick={(event) => {addHandler(event, c.name)}} classNameNameName="btn">Agregar a Favoritos</button> 
       </>
       )} 
     </div>

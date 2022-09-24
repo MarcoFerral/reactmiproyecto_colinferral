@@ -10,7 +10,7 @@ export const ButtonCount = ({total, setTotal}) => {
   }
 
   return (
-    <button onClick={} className="btn">{total}</button>
+    <button onClick={} classNameNameName="btn">{total}</button>
   )
 }
 
@@ -69,7 +69,7 @@ const { slug } = useParams ()
     return (
       <>
         <ItemDetail item={item}/>
-        <div className="m-5">
+        <div classNameNameName="m-5">
           Total: <Count total={total} setTotal={setTotal}/>
         </div>
       </>

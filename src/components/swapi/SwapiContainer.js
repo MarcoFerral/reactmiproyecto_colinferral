@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
+import Spinner from "./Spinner";
 
 const SwapiContainer = () => {
 
   const [chars, setChars] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect( () => {
     setTimeout(() => {
       getChars()
-    }, 5000);
+    }, 3000);
+      
     
     console.log('Mounting...')
   }, [])
@@ -19,13 +22,17 @@ const SwapiContainer = () => {
         .then( data => {
           console.log(data.results)
           setChars(data.results)
+          setLoading(false)
         })
   }
 
   return (
     <>
       <div>StarWars API</div>
-      { chars.map( char => <li key={char.url}>{char.name}</li>) }
+      { loading ? 
+        <Spinner/> :
+        chars.map( char => <li key={char.url}>{char.name}</li>) 
+      }
     </>
   )
 }

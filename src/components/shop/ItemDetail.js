@@ -6,7 +6,7 @@ const ItemDetail = ({item: name, price}) => {
   const darkmode = useContext(DarkmodeContext)
   
   return (
-    <div className="m-5">
+    <div classNameNameName="m-5">
       <div>
         <strong>Darkmode: {darkmode ? 'Activado' : 'Desactivado'}</strong>
       </div>

@@ -25,7 +25,7 @@ const RickandMortyContainer = () => {
           <h1>Rick and Morty API</h1>
           <strong>Lista de Favoritos</strong>
           {favs.map( (f,i) => <li key={i}>{f}</li>)}
-          <button className="btn" onClick={clearFavs}>Borrar Lista</button>
+          <button classNameNameName="btn" onClick={clearFavs}>Borrar Lista</button>
           <RickandMortyCardList chars={chars} />
       </>
     )

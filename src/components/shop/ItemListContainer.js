@@ -17,7 +17,7 @@ const ItemListContainer = () => {
     <div>
         { items.map( i => 
             <Link to={`/shop/item/${i.slug}`} key={i.id}>
-            <div className="m-2 p-2 bg-blue-300"> { i.name } </div>
+            <div classNameNameName="m-2 p-2 bg-blue-300"> { i.name } </div>
             </Link>
         )}
     </div>

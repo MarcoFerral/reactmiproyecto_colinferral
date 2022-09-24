@@ -24,6 +24,7 @@ root.render(
       <Route path='/ram/:id' element={<RickandMortyDetail/>}/>
       <Route path='/shop' element={<ItemListContainer/>}/>
       <Route path='/shop/item/:slug' element={<ItemDetailContainer/>}/>
+      <Route path='/memo' element={<MemoContainer/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>
