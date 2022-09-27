@@ -11,6 +11,22 @@ import Footer from './components/Footer';
 import RickandMortyDetail from './components/RickandMorty/RickandMortyDetail';
 import ItemDetailContainer from './components/shop/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
+import { initializeApp } from "firebase/app";
+import ProductsContainer from './components/desdefirebase/ProductsContainer';
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCVyJ_vBUzvL_o58ijD1o063YZPKEBxM1I",
+  authDomain: "reactmiproyectocolinferral.firebaseapp.com",
+  projectId: "reactmiproyectocolinferral",
+  storageBucket: "reactmiproyectocolinferral.appspot.com",
+  messagingSenderId: "451774685739",
+  appId: "1:451774685739:web:16c96d0d11885f99dc806e"
+};
+
+
+const app = initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +41,7 @@ root.render(
       <Route path='/shop' element={<ItemListContainer/>}/>
       <Route path='/shop/item/:slug' element={<ItemDetailContainer/>}/>
       <Route path='/memo' element={<MemoContainer/>}/>
+      <Route path='/products' element={<ProductsContainer/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>
