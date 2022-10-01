@@ -44,7 +44,6 @@ const ProductsContainer = () => {
   }
   
   return (
-    <{/* ProductCard */} {...products}/>
     <>
         { products.map( p => <ProductCard key={p-id} {...p}/> ) }
     </>

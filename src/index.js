@@ -13,6 +13,7 @@ import ItemDetailContainer from './components/shop/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import { initializeApp } from "firebase/app";
 import ProductsContainer from './components/desdefirebase/ProductsContainer';
+import CartView from './components/shop/CartView';
 
 
 
@@ -42,6 +43,7 @@ root.render(
       <Route path='/shop/item/:slug' element={<ItemDetailContainer/>}/>
       <Route path='/memo' element={<MemoContainer/>}/>
       <Route path='/products' element={<ProductsContainer/>}/>
+      <Route path='/products/cart' element={<CartView/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>
