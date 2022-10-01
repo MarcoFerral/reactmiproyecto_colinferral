@@ -1,4 +1,4 @@
-import { addDoc, collection, getDocs, getFirestore, updateDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs, getFirestore, updateDoc } from "firebase/firestore";
 
 const CartView = () => {
 
@@ -31,7 +31,9 @@ const CartView = () => {
     const  db = getFirestore()
      const orderCollection = collection(db, 'orders') 
      const orderDoc = doc(orderCollection, "WsPnEfYuP355Kqe0uVGH")
-     updateDoc( orderDoc, {price:1900})
+     updateDoc( orderDoc, {
+      price:1900,
+    })
    }
 
   return (
